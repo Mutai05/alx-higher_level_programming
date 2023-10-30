@@ -1,6 +1,6 @@
 Python was created by Guido van Rossum, a Dutch programmer. He started working on Python in the late 1980s and released the first version, Python 0.9.0, in February 1991.
 
-Guido van Rossum is the creator of Python and is often referred to as the "Benevolent Dictator For Life" (BDFL) within the Python community. He played a central role in Python's development and decision-making processes for many years. Guido van Rossum retired from his role as BDFL in July 2018 but remained an influential figure in the Python community.
+Guido van Rossum is the creator of Python. He is often referred to as the "Benevolent Dictator For Life" (BDFL) within the Python community. He played a central role in Python's development and decision-making processes for many years. Guido van Rossum retired from his role as BDFL in July 2018 but remained an influential figure in the Python community.
 
 The name "Python" doesn't come from the snake but rather from the British comedy group Monty Python. Guido van Rossum enjoyed their work and chose the name as a tribute to them when he created the language.
 
