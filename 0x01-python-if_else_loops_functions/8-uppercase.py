@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 def uppercase(s):
     upper_s = ""
     for char in s:
@@ -8,7 +7,3 @@ def uppercase(s):
         else:
             upper_s += char
     print("{:s}".format(upper_s))
-
-# Test the function
-uppercase("best")
-uppercase("Best School 98 Battery street")
