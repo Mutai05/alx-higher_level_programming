@@ -9,4 +9,3 @@ def print_last_digit(number):
     return last_digit
 
 # Test the function
-
