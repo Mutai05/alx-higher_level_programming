@@ -40,7 +40,7 @@ function_name()
 
 **How to Create a Module:**
 
-To create a module, you need to create a Python file with functions, classes, or variables, and save it with a `.py` extension. For example, you can create a module named `my_module.py` and define functions in it.
+To create a module, you will need to create a Python file with functions, classes, or variables, and save it with a `.py` extension. For example, you can create a module named `my_module.py` and define functions in it.
 
 ```python
 # my_module.py
