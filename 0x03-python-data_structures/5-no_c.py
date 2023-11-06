@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def no_c(my_string):
     # Create an empty string to store the result
     result = ""
