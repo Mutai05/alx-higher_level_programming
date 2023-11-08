@@ -1,13 +1,18 @@
 #!/usr/bin/python3
 
 def weight_average(my_list=[]):
-    if not my_list:
-        return 0.0
+    # Check if my_list is a non-empty list
+    if not isinstance(my_list, list) or len(my_list) == 0:
+        return 0
 
-    return sum(score * weight for score, weight in my_list) / sum(weight for _, weight in my_list)
+    # Initialize variables for weighted average calculation
+    av = 0
+    size = 0
 
-# Test the function with the provided example
-if __name__ == "__main__":
-    my_list = [(1, 2), (2, 1), (3, 10), (4, 2)]
-    result = weight_average(my_list)
-    print("Average: {:0.2f}".format(result))
+    # Calculate weighted sum and total weight
+    for t in my_list:
+        av += (t[0] * t[1])
+        size += t[1]
+
+    # Calculate and return the weighted average
+    return (av / size)
