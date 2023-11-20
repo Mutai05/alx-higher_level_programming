@@ -12,7 +12,7 @@ def safe_print_integer_err(value):
         print("Exception: {}".format(e), file=sys.stderr)
         return False
 
-# Test cases
+
 if __name__ == "__main__":
     value = 89
     has_been_print = safe_print_integer_err(value)
