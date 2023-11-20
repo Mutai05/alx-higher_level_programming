@@ -9,6 +9,7 @@ def raise_exception():
         # Raise the TypeError explicitly
         raise TypeError("Exception raised")
 
+
 if __name__ == "__main__":
     try:
         raise_exception()
