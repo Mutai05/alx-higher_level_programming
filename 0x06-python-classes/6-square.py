@@ -1,12 +1,28 @@
 #!/usr/bin/python3
+# 6-square.py by Kelvin KIpkemboi
+"""Defines a square """
 
 class Square:
+    """Defines a square"""
+    
     def __init__(self, size=0, position=(0, 0)):
+        """Create a Square
+        Args:
+            size: length of a side of a Square
+            position: where the square is (coordinates)
+        """
+        
         self.size = size
         self.position = position
 
     @property
     def size(self):
+        """"The property of size as the len of a side of Square
+        Raises:
+            TypeError: if size != int
+            ValueError: if size < 0
+        """
+        
         return self.__size
 
     @size.setter
@@ -38,6 +54,8 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
+        """print the square in position"""
+        
         if self.__size == 0:
             print()
         else:
