@@ -1,12 +1,20 @@
 #!/usr/bin/python3
+# 100-singly_linked_list.py by Kelvin KIpkemboi
+"""A class Node that defines a node of a singly linked list """
 
 class Node:
+    """"defines a node"""
+    
     def __init__(self, data, next_node=None):
+        """initializes the node with instance variables"""
+        
         self.data = data
         self.next_node = next_node
 
     @property
     def data(self):
+        """gets data attribute"""
+        
         return self.__data
 
     @data.setter
@@ -29,6 +37,8 @@ class Node:
 
 
 class SinglyLinkedList:
+    """defines a singly linked list"""
+    
     def __init__(self):
         self.head = None
 
