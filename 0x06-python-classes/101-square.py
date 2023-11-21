@@ -1,7 +1,17 @@
 #!/usr/bin/python3
+# 101-square.py by Kelvin KIpkemboi
+"""a class Square that defines a square """
 
 class Square:
+    """define a Square."""
+    
     def __init__(self, size=0, position=(0, 0)):
+        """Initialize the square with this
+        Args:
+            size: a side of square
+            position: where the square is coordinates
+        """
+        
         self.size = size
         self.position = position
 
