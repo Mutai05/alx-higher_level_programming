@@ -27,6 +27,7 @@ class Node:
         else:
             self.__next_node = value
 
+
 class SinglyLinkedList:
     def __init__(self):
         self.head = None
@@ -38,7 +39,10 @@ class SinglyLinkedList:
             self.head = new_node
         else:
             current = self.head
-            while current.next_node is not None and current.next_node.data < new_node.data:
+            while (
+                current.next_node is not None
+                and current.next_node.data < new_node.data
+            ):
                 current = current.next_node
             new_node.next_node = current.next_node
             current.next_node = new_node
