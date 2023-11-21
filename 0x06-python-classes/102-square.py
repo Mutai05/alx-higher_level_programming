@@ -1,7 +1,15 @@
 #!/usr/bin/python3
+# 102-square.py by Kelvin KIpkemboi
+"""a class Square that defines a square """
 
 class Square:
+    """define a Square."""
+    
     def __init__(self, size=0):
+        """Create a Square
+        Args: size: length of side of a Square
+        """
+        
         if not isinstance(size, (int, float)):
             raise TypeError("size must be a number")
 
@@ -12,6 +20,12 @@ class Square:
 
     @property
     def size(self):
+        """"The property of size as the len of a side of Square
+        Raises:
+            TypeError: if size != int
+            ValueErrorr: if size < 0
+        """
+        
         return self.__size
 
     @size.setter
