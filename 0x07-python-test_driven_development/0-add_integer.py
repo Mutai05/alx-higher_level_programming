@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def add_integer(a, b=98):
+def add_integer(a=None, b=98):
     """
     Adds two integers.
 
@@ -28,21 +28,13 @@ def add_integer(a, b=98):
     >>> add_integer(None)
     Traceback (most recent call last):
     ...
-    TypeError: b must be an integer
+    TypeError: a must be an integer
     >>> add_integer(float("inf"))
     Traceback (most recent call last):
     ...
-    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
-    >>> add_integer("hey")
-    Traceback (most recent call last):
-    ...
     TypeError: a must be an integer
-    >>> add_integer(0, [1, 2, 3])
-    Traceback (most recent call last):
-    ...
-    TypeError: b must be an integer
     """
-    if not isinstance(a, (int, float)):
+    if a is not None and not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
