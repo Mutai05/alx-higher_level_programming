@@ -1,32 +1,46 @@
-# Test cases for add_integer function
+# run test with python3 -m doctest -v ./0-add_integer.py
 
->>> from 0-add_integer import add_integer
+First import method to test
+>>> add_integer = __import__ ('0-add_integer').add_integer
 
-# Test case 1: Adding two integers
->>> add_integer(1, 2)
+SUCCESS CASES:
+
+Test signed and unsigned ints and floats:
+>>> print(add_integer(1, 2))
 3
+>>> print(add_integer(-1, 2))
+1
+>>> print(add_integer(1.5, 2.9))
+3
+>>> print(add_integer(-2.9, 1))
+-1
 
-# Test case 2: Adding an integer and a negative integer
->>> add_integer(100, -2)
-98
+Test use of default b=98 value:
+>>> print(add_integer(1))
+99
 
-# Test case 3: Adding a single integer (default second parameter)
->>> add_integer(2)
-100
+FAIL CASES:
 
-# Test case 4: Adding a float and a negative float (should be casted to integers)
->>> add_integer(100.3, -2)
-98
-
-# Test case 5: Adding an integer and a string (should raise TypeError)
->>> add_integer(4, "School")
+Test no args:
+>>> print(add_integer(None))
 Traceback (most recent call last):
-    ...
+...
+
 TypeError: b must be an integer
 
-# Test case 6: Adding None (should raise TypeError)
->>> add_integer(None)
+Test max/min numbers Python can handle ("inf" is infinity):
+>>> print(add_integer(float("inf")))
 Traceback (most recent call last):
-    ...
-TypeError: a must be an integer
+...
 
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+Test other data types:
+>>> print(add_integer("hey"))
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> print(add_integer(0, [1, 2, 3]))
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
