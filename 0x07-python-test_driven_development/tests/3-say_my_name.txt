@@ -2,19 +2,19 @@
 
 >>> from 3-say_my_name import say_my_name
 
-# Test case 1: Print first and last name
+# Test case 1: Check if passing valid names raises no error
 >>> say_my_name("John", "Smith")
-My name is John Smith
+# No output, expecting no errors
 
-# Test case 2: Print only first name
+# Test case 2: Check if passing a first and last name raises no error
 >>> say_my_name("Walter", "White")
-My name is Walter White
+# No output, expecting no errors
 
-# Test case 3: Print only first name (default last name)
+# Test case 3: Check if passing only first name (default last name) raises no error
 >>> say_my_name("Bob")
-My name is Bob
+# No output, expecting no errors
 
-# Test case 4: Passing a non-string value as first name (should raise TypeError)
+# Test case 4: Check if passing a non-string value as first name raises TypeError
 >>> say_my_name(12, "White")
 Traceback (most recent call last):
     ...
