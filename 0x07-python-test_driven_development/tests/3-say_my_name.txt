@@ -1,0 +1,21 @@
+# Testing say_my_name function
+
+>>> from 3-say_my_name import say_my_name
+
+# Test case 1: Print first and last name
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+# Test case 2: Print only first name
+>>> say_my_name("Walter", "White")
+My name is Walter White
+
+# Test case 3: Print only first name (default last name)
+>>> say_my_name("Bob")
+My name is Bob
+
+# Test case 4: Passing a non-string value as first name (should raise TypeError)
+>>> say_my_name(12, "White")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string or last_name must be a string
