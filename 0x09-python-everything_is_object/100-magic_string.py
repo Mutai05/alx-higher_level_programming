@@ -1,8 +1,4 @@
 #!/usr/bin/python3
-
 def magic_string():
-    """Generates a string 'BestSchool' repeated a certain number of times based on the iteration count."""
-    return ", ".join(["BestSchool"] * magic_string.iteration_count())
-
-magic_string.iteration_count = lambda: magic_string.iteration_count.__dict__.setdefault("count", 0) + 1
-
+    magic_string.count = getattr(magic_string, 'count', 0) + 1
+    return ", ".join(["BestSchool" for i in range(magic_string.count)])
