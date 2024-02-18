@@ -1,45 +1,28 @@
 #!/usr/bin/python3
 """
-Script that lists all states with a name starting
-with N from the database hbtn_0e_0_usa
+This script lists all states with
+a `name` starting with the letter `N`
+from the database `hbtn_0e_0_usa`.
 """
 
-import MySQLdb
-import sys
+import MySQLdb as db
+from sys import argv
 
-if __name__ == "__main__":
-    # Validate the number of command-line arguments
-    if len(sys.argv) != 4:
-        print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
-        sys.exit(1)
+"""
+Access to the database and get the states
+from the database.
+"""
 
-    # Retrieve command-line arguments
-    username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
+if __name__ == '__main__':
+    db_connect = db.connect(host="localhost", port=3306,
+                            user=argv[1], passwd=argv[2], db=argv[3])
+    db_cursor = db_connect.cursor()
 
-    # Connect to MySQL server
-    db = MySQLdb.connect(
-        host="localhost",
-        port=3306,
-        user=username,
-        passwd=password,
-        db=database
-    )
+    db_cursor.execute(
+        "SELECT * FROM states WHERE name LIKE BINARY 'N%' \
+                ORDER BY states.id ASC")
 
-    # Create a cursor object
-    cursor = db.cursor()
+    rows_selected = db_cursor.fetchall()
 
-    # Execute the SELECT query for states starting with 'N'
-    cursor.execute(
-        "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
-    )
-
-    # Fetch all the rows
-    rows = cursor.fetchall()
-
-    # Display results
-    for row in rows:
+    for row in rows_selected:
         print(row)
-
-    # Close cursor and database connection
-    cursor.close()
-    db.close()
