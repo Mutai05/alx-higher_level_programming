@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Sends a POST request to http://0.0.0.0:5000/search_user with a letter as a parameter"""
+"""Sends a POST request to http://0.0.0.0:5000/search_user
+with a letter as a parameter"""
 import requests
 import sys
 
@@ -12,7 +13,8 @@ if __name__ == "__main__":
     payload = {'q': q}
 
     try:
-        response = requests.post("http://0.0.0.0:5000/search_user", data=payload)
+        response = requests.post("http://0.0.0.0:5000/search_user",
+                                 data=payload)
         data = response.json()
 
         if data:
